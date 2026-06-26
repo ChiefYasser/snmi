@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SNMI — Maintenance Industrielle | Industrial Maintenance</title>
+  <meta name="description" data-i18n="meta_desc" content="SNMI — Société de maintenance industrielle au Maroc : turbines à vapeur, moulins, réducteurs, chaudronnerie et optimisation énergétique pour l'industrie lourde." />
+  <meta name="theme-color" content="#FAF9F6" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="maintenance industrielle, turbines à vapeur, réducteurs, moulins, chaudronnerie, alignement laser, Kénitra, Maroc, sucreries, cimenteries, phosphates, OCP, SURAC, industrial maintenance Morocco" />
+  <meta name="author" content="SNMI SARL" />
+  <link rel="canonical" href="https://snmi.sarl/" />
+  <link rel="alternate" hreflang="fr" href="https://snmi.sarl/" />
+  <link rel="alternate" hreflang="en" href="https://snmi.sarl/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://snmi.sarl/" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <!-- geo -->
+  <meta name="geo.region" content="MA-04" />
+  <meta name="geo.placename" content="Kénitra" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="SNMI — Maintenance Industrielle" />
+  <meta property="og:locale" content="fr_MA" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:title" content="SNMI — Maintenance Industrielle" />
+  <meta property="og:description" content="Entretien, réparation et optimisation des équipements industriels lourds. Kénitra, Maroc — depuis 2010." />
+  <meta property="og:image" content="https://snmi.sarl/assets/img/hero-plant.jpg" />
+  <meta property="og:url" content="https://snmi.sarl/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SNMI — Maintenance Industrielle" />
+  <meta name="twitter:description" content="Entretien, réparation et optimisation des équipements industriels lourds. Kénitra, Maroc." />
+  <meta name="twitter:image" content="https://snmi.sarl/assets/img/hero-plant.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="image" href="assets/video/hero-poster.jpg" fetchpriority="high" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: '#FAF9F6', cream: '#F2F0EB', ink: '#1A1A1A', charcoal: '#222222',
+            stone: '#6B6862', line: '#E4E2DD', line2: '#D4D1CA',
+            gold: '#8C6E3F', goldlt: '#A8884F', olive: '#6B6F4E',
+          },
+          fontFamily: {
+            display: ['Fraunces', 'Georgia', 'serif'],
+            sans: ['Manrope', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
+          },
+          maxWidth: { content: '1200px' },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Manrope', system-ui, sans-serif; }
+    .font-display { font-family: 'Fraunces', Georgia, serif; }
+    .text-balance { text-wrap: balance; }
+    .text-pretty { text-wrap: pretty; }
+    .js .will-reveal { opacity: 0; transform: translateY(16px); filter: blur(6px); }
+    .js .will-reveal.in { opacity: 1; transform: none; filter: blur(0); transition: opacity .55s ease-out, transform .55s cubic-bezier(.22,1,.36,1), filter .55s ease-out; }
+    .nav-link { position: relative; color:#6B6862; }
+    .nav-link::after { content:''; position:absolute; left:0; bottom:-5px; height:1.5px; width:0; background:#8C6E3F; transition:width .3s ease; }
+    .nav-link:hover, .nav-link.active { color:#1A1A1A; }
+    .nav-link:hover::after, .nav-link.active::after { width:100%; }
+    a:focus-visible, button:focus-visible { outline: 2px solid #8C6E3F; outline-offset: 3px; border-radius: 4px; }
+    section[id] { scroll-margin-top: 92px; }
+    /* adaptive header: transparent over hero, solid after */
+    #header { transition: background .35s ease, border-color .35s ease, box-shadow .35s ease; }
+    #header.at-top { background: transparent; border-color: transparent; }
+    #header.at-top .nav-link { color: rgba(250,249,246,.8); }
+    #header.at-top .nav-link:hover, #header.at-top .nav-link.active { color:#fff; }
+    #header.at-top .hdr-flip { color:#fff; }
+    #header.at-top .hdr-sep { color: rgba(255,255,255,.4); }
+    #header.at-top .burger-bar { background:#fff; }
+    #header.at-top .logo-dark { display:none; }
+    #header:not(.at-top) .logo-light { display:none; }
+    #header.at-top .hdr-cta { background:transparent; border-color:rgba(255,255,255,.5); color:#fff; }
+    #header.at-top .hdr-cta:hover { border-color:#fff; background:rgba(255,255,255,.1); }
+    #progress { position:fixed; top:0; left:0; height:2px; width:0; background:#8C6E3F; z-index:60; transition:width .1s linear; }
+    #toTop { opacity:0; transform:translateY(12px); pointer-events:none; transition:opacity .3s ease-out, transform .3s ease-out, background-color .2s ease-out; }
+    #toTop.show { opacity:1; transform:none; pointer-events:auto; }
+    .js .stagger > * { opacity:0; transform:translateY(14px); filter:blur(6px); }
+    .js .stagger.in > * { opacity:1; transform:none; filter:blur(0); transition:opacity .5s ease-out, transform .5s cubic-bezier(.22,1,.36,1), filter .5s ease-out; }
+    .js .stagger.in > *:nth-child(2){transition-delay:.08s} .js .stagger.in > *:nth-child(3){transition-delay:.16s}
+    .js .stagger.in > *:nth-child(4){transition-delay:.24s} .js .stagger.in > *:nth-child(5){transition-delay:.32s}
+    .js .stagger.in > *:nth-child(6){transition-delay:.40s} .js .stagger.in > *:nth-child(7){transition-delay:.48s}
+    .js .stagger.in > *:nth-child(8){transition-delay:.56s}
+    .marquee { display:flex; gap:0; width:max-content; animation: marquee var(--mq-dur, 24s) linear infinite; }
+    .marquee.reverse { animation-direction: reverse; }
+    .marquee:hover { animation-play-state: paused; }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(calc(-1 * var(--mq-set, 50%))); } }
+    /* edge fade so the ticker doesn't hard-clip at the viewport edges */
+    .rail-mask { -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent); mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent); }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .js .will-reveal, .js .stagger > * { opacity:1 !important; transform:none !important; filter:none !important; transition:none !important; }
+      .marquee { animation: none; }
+    }
+    /* --- make-interfaces-feel-better polish --- */
+    .tnum { font-variant-numeric: tabular-nums; }
+    .shadow-soft { box-shadow: 0 0 0 1px rgba(0,0,0,.04), 0 1px 2px -1px rgba(0,0,0,.06), 0 6px 16px rgba(0,0,0,.05); }
+    .shadow-lift { box-shadow: 0 0 0 1px rgba(0,0,0,.05), 0 2px 6px rgba(0,0,0,.05), 0 14px 30px rgba(0,0,0,.09), 0 30px 60px rgba(0,0,0,.07); }
+    .media-ring { box-shadow: inset 0 0 0 1px rgba(0,0,0,.06); }   /* pure-black hairline, not tinted */
+    /* press: single transition list on the button covers transform; here only the active state */
+    .press:active { transform: scale(.96); }
+    @media (prefers-reduced-motion: reduce) { .press:active { transform: none; } }
+    /* crossfade image stacks (sectors / services sticky split) */
+    .xfade > img { position:absolute; inset:0; height:100%; width:100%; object-fit:cover; opacity:0; transition:opacity .6s ease; }
+    .xfade > img.active { opacity:1; }
+    /* scroll-spy row accents */
+    .spy-row .s-num { transition:color .3s ease; }
+    .spy-row:hover .s-num, .spy-row.active .s-num { color:#8C6E3F; }
+    .spy-row h3 { transition:color .3s ease; color:#6B6862; }
+    .spy-row:hover h3, .spy-row.active h3 { color:#1A1A1A; }
+    /* references accordion + logo harmonization */
+    .acc { display:grid; grid-template-rows:0fr; transition:grid-template-rows .45s cubic-bezier(.22,1,.36,1); }
+    .acc > div { overflow:hidden; }
+    .ref-row:hover .acc, .ref-row.open .acc { grid-template-rows:1fr; }
+    .ref-logo { filter:grayscale(1); opacity:.6; transition:filter .45s ease, opacity .45s ease; }
+    .ref-row:hover .ref-logo, .ref-row.open .ref-logo { filter:grayscale(0); opacity:1; }
+    @media (prefers-reduced-motion: reduce){ .xfade > img, .acc, .ref-logo { transition:none; } }
+    /* expanding image panels (Prestations) */
+    .panel { position:relative; overflow:hidden; }
+    .panel .p-desc { transition:opacity .5s ease, transform .5s ease; }
+    @media (min-width:768px){
+      .panels { height:34rem; }
+      .panel { flex:1 1 0%; min-width:0; transition:flex-grow .6s cubic-bezier(.22,1,.36,1); }
+      .panels:hover .panel { flex-grow:.55; }
+      .panels .panel:hover { flex-grow:3.2; }
+      .panel .p-desc { opacity:0; transform:translateY(8px); }
+      .panels .panel:hover .p-desc { opacity:1; transform:none; }
+      .panel .p-img { transition:transform .8s cubic-bezier(.22,1,.36,1); }
+      .panels .panel:hover .p-img { transform:scale(1.05); }
+    }
+    @media (prefers-reduced-motion: reduce){ .panel, .panel .p-desc, .panels .panel:hover, .panel .p-img { transition:none; } }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "SNMI — Société Nmar de Maintenance Industrielle",
+    "alternateName": "SNMI SARL",
+    "url": "https://snmi.sarl/",
+    "image": "https://snmi.sarl/assets/img/hero-plant.jpg",
+    "logo": "https://snmi.sarl/assets/logo.svg",
+    "description": "Société de maintenance industrielle au Maroc : turbines à vapeur, moulins, réducteurs, chaudronnerie, alignement laser et optimisation énergétique pour l'industrie lourde.",
+    "email": "ab-nma@hotmail.fr",
+    "telephone": "+212672969412",
+    "faxNumber": "+212537375868",
+    "foundingDate": "2010",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "30-32, Angle Aboubaker Essadiq & Ghandi, Immeuble B, Bureau N°1, Résidence Ibrahim",
+      "addressLocality": "Kénitra",
+      "addressCountry": "MA"
+    },
+    "areaServed": ["Maroc", "Kenya", "Tchad", "Burkina Faso"],
+    "knowsAbout": ["Turbines à vapeur", "Réducteurs", "Moulins d'extraction", "Chaudronnerie", "Alignement laser", "Transporteurs", "Optimisation énergétique", "Pompes"],
+    "makesOffer": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Maintenance de turbines à vapeur" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Entretien des pompes et réducteurs" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Chaudronnerie industrielle" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Optimisation énergétique" } }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-paper text-ink antialiased selection:bg-gold/20">
+  <script>document.body.classList.add('js');</script>
+  <div id="progress" aria-hidden="true"></div>
+  <a href="#about" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[70] focus:rounded focus:bg-ink focus:px-4 focus:py-2 focus:text-paper" data-i18n="skip">Aller au contenu</a>
+
+  <!-- ============ HEADER ============ -->
+  <header id="header" class="at-top fixed top-0 z-40 w-full border-b border-line bg-paper/80 backdrop-blur-md">
+    <div class="mx-auto grid h-[76px] max-w-content grid-cols-[auto_1fr_auto] items-center gap-4 px-6">
+      <a href="#hero" class="flex items-center">
+        <img src="assets/logo.svg" alt="SNMI" class="logo-dark h-10 w-auto" />
+        <img src="assets/logo-white.svg" alt="SNMI" class="logo-light h-10 w-auto" />
+      </a>
+      <nav id="nav" class="hidden items-center justify-center gap-9 lg:flex">
+        <a href="#about" class="nav-link text-sm font-medium" data-i18n="nav_about">À propos</a>
+        <a href="#sectors" class="nav-link text-sm font-medium" data-i18n="nav_sectors">Secteurs</a>
+        <a href="#services" class="nav-link text-sm font-medium" data-i18n="nav_services">Services</a>
+        <a href="#references" class="nav-link text-sm font-medium" data-i18n="nav_refs">Références</a>
+        <a href="#resources" class="nav-link text-sm font-medium" data-i18n="nav_resources">Moyens</a>
+      </nav>
+      <div class="flex items-center justify-end gap-4">
+        <div class="flex items-center gap-1.5 text-xs font-semibold tracking-wide" aria-label="Language">
+          <a href="./" class="hdr-flip text-ink" hreflang="fr" aria-current="true">FR</a><span class="hdr-sep text-line2">/</span><a href="en/" class="hdr-flip text-stone" hreflang="en">EN</a>
+        </div>
+        <a href="#contact" class="hdr-cta press hidden rounded-xl bg-ink px-5 py-2.5 text-sm font-semibold text-paper transition-[transform,background-color,border-color] duration-200 ease-out hover:bg-charcoal sm:inline-block" data-i18n="nav_contact">Nous contacter</a>
+        <button id="burger" class="flex flex-col gap-1.5 p-1.5 lg:hidden" aria-label="Menu">
+          <span class="burger-bar h-0.5 w-6 rounded bg-ink"></span><span class="burger-bar h-0.5 w-6 rounded bg-ink"></span><span class="burger-bar h-0.5 w-6 rounded bg-ink"></span>
+        </button>
+      </div>
+    </div>
+    <nav id="mobileNav" class="hidden border-t border-line bg-paper lg:hidden">
+      <div class="flex flex-col px-6 py-2">
+        <a href="#about" class="border-b border-line py-3 font-medium" data-i18n="nav_about">À propos</a>
+        <a href="#sectors" class="border-b border-line py-3 font-medium" data-i18n="nav_sectors">Secteurs</a>
+        <a href="#services" class="border-b border-line py-3 font-medium" data-i18n="nav_services">Services</a>
+        <a href="#references" class="border-b border-line py-3 font-medium" data-i18n="nav_refs">Références</a>
+        <a href="#resources" class="border-b border-line py-3 font-medium" data-i18n="nav_resources">Moyens</a>
+        <a href="#contact" class="py-3 font-semibold text-gold" data-i18n="nav_contact">Nous contacter</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section id="hero" class="relative flex min-h-screen items-center overflow-hidden">
+    <video class="absolute inset-0 -z-10 h-full w-full object-cover" autoplay muted loop playsinline preload="auto" poster="assets/video/hero-poster.jpg" aria-hidden="true">
+      <source src="assets/video/turbine-cinematic.mp4" type="video/mp4" />
+    </video>
+    <div class="absolute inset-0 -z-10 bg-gradient-to-r from-ink/90 via-ink/60 to-ink/20"></div>
+    <div class="absolute inset-0 -z-10 bg-gradient-to-t from-ink/45 via-transparent to-transparent"></div>
+
+    <div class="mx-auto w-full max-w-content px-6 pt-28 pb-24">
+      <p class="font-mono text-xs uppercase tracking-[0.35em] text-goldlt" data-i18n="hero_kicker">Maintenance industrielle · Kénitra, Maroc · depuis 2010</p>
+      <h1 class="mt-7 max-w-4xl text-balance font-display text-5xl font-medium leading-[1.03] tracking-tight text-paper md:text-7xl lg:text-[5.5rem]" data-i18n="hero_title">L'ingénierie qui maintient l'industrie lourde en marche.</h1>
+      <p class="mt-8 max-w-xl text-pretty text-lg leading-relaxed text-paper/80" data-i18n="hero_lead">SNMI assure l'entretien, la réparation et l'optimisation des équipements critiques — turbines à vapeur, moulins, réducteurs, chaudronnerie et performance énergétique. Sur site et en atelier, là où chaque heure d'arrêt compte.</p>
+      <div class="mt-10 flex flex-wrap gap-3">
+        <a href="#contact" class="press rounded-xl bg-paper px-8 py-4 font-semibold text-ink shadow-soft transition-[transform,box-shadow] duration-200 ease-out hover:-translate-y-0.5 hover:shadow-lift" data-i18n="hero_btn1">Demander un devis</a>
+        <a href="#services" class="press rounded-xl border border-paper/50 px-8 py-4 font-semibold text-paper transition-[transform,background-color,border-color] duration-200 ease-out hover:border-paper hover:bg-white/10" data-i18n="hero_btn2">Nos prestations</a>
+      </div>
+    </div>
+
+    <!-- scroll cue -->
+    <a href="#about" class="absolute bottom-7 right-6 hidden items-center gap-3 font-mono text-[11px] uppercase tracking-[0.3em] text-paper/60 transition-colors duration-200 hover:text-paper md:flex">
+      <span data-i18n="hero_scroll">Défiler</span>
+      <svg class="h-4 w-4 animate-bounce" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+    </a>
+  </section>
+
+  <!-- ============ STATS STRIP ============ -->
+  <section class="border-b border-line bg-paper">
+    <dl class="mx-auto grid max-w-content grid-cols-2 px-6 md:grid-cols-4">
+      <div class="border-line py-9 md:border-l md:pl-7 md:first:border-l-0 md:first:pl-0"><dt class="font-display text-4xl font-medium text-ink tnum" data-count="5" data-suffix="+">5+</dt><dd class="mt-1 font-mono text-xs uppercase tracking-wider text-stone" data-i18n="stat_sectors">Secteurs industriels</dd></div>
+      <div class="border-line py-9 md:border-l md:pl-7"><dt class="font-display text-4xl font-medium text-ink tnum" data-count="25">25</dt><dd class="mt-1 font-mono text-xs uppercase tracking-wider text-stone" data-i18n="stat_team">Ingénieurs & techniciens</dd></div>
+      <div class="border-line py-9 md:border-l md:pl-7"><dt class="font-display text-4xl font-medium text-ink tnum" data-count="450" data-suffix="&nbsp;m²">450&nbsp;m²</dt><dd class="mt-1 font-mono text-xs uppercase tracking-wider text-stone" data-i18n="stat_atelier">Atelier équipé</dd></div>
+      <div class="border-line py-9 md:border-l md:pl-7"><dt class="font-display text-4xl font-medium text-ink tnum" data-count="3">3</dt><dd class="mt-1 font-mono text-xs uppercase tracking-wider text-stone" data-i18n="stat_countries">Pays d'intervention</dd></div>
+    </dl>
+  </section>
+
+  <!-- ============ RAIL · clients ============ -->
+  <div class="rail-mask overflow-hidden border-y border-line2 bg-cream py-4">
+    <div class="marquee items-center text-ink/70">
+      <span class="flex shrink-0 items-center gap-10 px-5 font-display text-base font-medium"><span class="media-ring flex h-16 items-center justify-center rounded-xl bg-white px-7"><img loading="lazy" src="assets/img/logos/cosumar.png" alt="Cosumar" class="max-h-11 w-auto object-contain"/></span><span class="media-ring flex h-16 items-center justify-center rounded-xl bg-white px-7"><img loading="lazy" src="assets/img/logos/ip.png" alt="International Paper" class="max-h-7 w-auto object-contain"/></span><span class="media-ring flex h-16 items-center justify-center rounded-xl bg-white px-7"><img loading="lazy" src="assets/img/logos/ocp.png" alt="OCP" class="max-h-11 w-auto object-contain"/></span><span class="media-ring flex h-16 items-center justify-center rounded-xl bg-white px-7"><img loading="lazy" src="assets/img/logos/oncf.png" alt="ONCF" class="max-h-8 w-auto object-contain"/></span><span class="media-ring flex h-16 items-center justify-center rounded-xl bg-white px-7"><img loading="lazy" src="assets/img/logos/nzoiasugar.png" alt="Nzoia Sugar" class="max-h-9 w-auto object-contain"/></span><span class="media-ring flex h-16 items-center justify-center rounded-xl bg-white px-7"><img loading="lazy" src="assets/img/logos/somdia.png" alt="Somdia" class="max-h-8 w-auto object-contain"/></span></span>
+      <span class="flex shrink-0 items-center gap-10 px-5 font-display text-base font-medium" aria-hidden="true"><span class="media-ring flex h-16 items-center justify-center rounded-xl bg-white px-7"><img loading="lazy" src="assets/img/logos/cosumar.png" alt="Cosumar" class="max-h-11 w-auto object-contain"/></span><span class="media-ring flex h-16 items-center justify-center rounded-xl bg-white px-7"><img loading="lazy" src="assets/img/logos/ip.png" alt="International Paper" class="max-h-7 w-auto object-contain"/></span><span class="media-ring flex h-16 items-center justify-center rounded-xl bg-white px-7"><img loading="lazy" src="assets/img/logos/ocp.png" alt="OCP" class="max-h-11 w-auto object-contain"/></span><span class="media-ring flex h-16 items-center justify-center rounded-xl bg-white px-7"><img loading="lazy" src="assets/img/logos/oncf.png" alt="ONCF" class="max-h-8 w-auto object-contain"/></span><span class="media-ring flex h-16 items-center justify-center rounded-xl bg-white px-7"><img loading="lazy" src="assets/img/logos/nzoiasugar.png" alt="Nzoia Sugar" class="max-h-9 w-auto object-contain"/></span><span class="media-ring flex h-16 items-center justify-center rounded-xl bg-white px-7"><img loading="lazy" src="assets/img/logos/somdia.png" alt="Somdia" class="max-h-8 w-auto object-contain"/></span></span>
+    </div>
+  </div>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="mx-auto max-w-content px-6 py-24 md:py-32">
+    <div class="grid gap-14 lg:grid-cols-2 lg:items-start">
+      <div class="will-reveal lg:sticky lg:top-28">
+        <p class="font-mono text-xs uppercase tracking-[0.3em] text-gold" data-i18n="about_kicker">L'entreprise</p>
+        <h2 class="mt-5 text-balance font-display text-4xl font-medium leading-[1.1] tracking-tight md:text-5xl" data-i18n="about_title">Une expertise mécanique au service de l'industrie</h2>
+        <p class="mt-6 text-pretty text-lg leading-relaxed text-stone" data-i18n="about_p1">SNMI (Société Nmar de Maintenance Industrielle) est une SARL spécialisée dans l'entretien et la maintenance industrielle, avec une expertise historique dans l'industrie sucrière.</p>
+        <p class="mt-4 text-pretty leading-relaxed text-stone" data-i18n="about_p2">Nous intervenons sur tout le cycle de vie des équipements : diagnostic, réparation, alignement laser, mise en service, optimisation des procédés et conservation.</p>
+        <div class="mt-8 inline-flex items-baseline gap-3 rounded-xl border border-ink/10 px-5 py-3">
+          <span class="font-display text-3xl font-medium text-ink tnum">2010</span>
+          <span class="font-mono text-[11px] uppercase tracking-wider text-stone" data-i18n="about_badge">Au service de l'industrie</span>
+        </div>
+      </div>
+      <div class="will-reveal">
+        <figure class="overflow-hidden rounded-2xl ring-1 ring-ink/10">
+          <video loading="lazy" class="aspect-[4/5] w-full object-cover sm:aspect-[5/4]" autoplay muted loop playsinline preload="none" poster="assets/video/workshop-poster.jpg" aria-hidden="true">
+            <source src="assets/video/workshop.mp4" type="video/mp4" />
+          </video>
+        </figure>
+        <ul class="mt-10 border-t border-ink/10">
+          <li class="flex items-start gap-5 border-b border-ink/10 py-5"><span class="mt-0.5 font-mono text-sm text-gold">01</span><div><h3 class="font-display text-lg font-medium" data-i18n="org_1_t">Maintenance générale</h3><p class="mt-1 text-sm text-stone" data-i18n="org_1_d">Mécanique, électrique, chaudronnerie</p></div></li>
+          <li class="flex items-start gap-5 border-b border-ink/10 py-5"><span class="mt-0.5 font-mono text-sm text-gold">02</span><div><h3 class="font-display text-lg font-medium" data-i18n="org_2_t">Automobile</h3><p class="mt-1 text-sm text-stone" data-i18n="org_2_d">Tôlerie, conservation, peinture</p></div></li>
+          <li class="flex items-start gap-5 border-b border-ink/10 py-5"><span class="mt-0.5 font-mono text-sm text-gold">03</span><div><h3 class="font-display text-lg font-medium" data-i18n="org_3_t">Prestation de service</h3><p class="mt-1 text-sm text-stone" data-i18n="org_3_d">Optimisation des procédés</p></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTORS ============ -->
+  <section id="sectors" class="bg-cream py-24 md:py-32">
+    <div class="mx-auto max-w-content px-6">
+      <div class="max-w-2xl will-reveal">
+        <p class="font-mono text-xs uppercase tracking-[0.3em] text-gold" data-i18n="sectors_kicker">Secteurs</p>
+        <h2 class="mt-5 text-balance font-display text-4xl font-medium leading-[1.1] tracking-tight md:text-5xl" data-i18n="sectors_title">Des secteurs exigeants, des équipements critiques</h2>
+        <p class="mt-6 text-pretty text-lg leading-relaxed text-stone" data-i18n="sectors_lead">Quand l'immobilisation d'une ligne se chiffre en heures critiques, nous garantissons la disponibilité et la longévité de vos équipements.</p>
+      </div>
+      <div class="mt-12 grid auto-rows-[200px] grid-flow-dense grid-cols-2 gap-4 lg:auto-rows-[230px] lg:grid-cols-4">
+      <article class="group relative overflow-hidden rounded-2xl ring-1 ring-ink/10 col-span-2 row-span-2">
+        <img loading="lazy" decoding="async" src="assets/img/mill-fives.jpg" alt="Moulin d'extraction de canne à sucre" class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent"></div>
+        <span class="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-paper/90 text-ink backdrop-blur-sm transition-[transform,background-color,color] duration-300 ease-out group-hover:rotate-90 group-hover:bg-ink group-hover:text-paper"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        <div class="absolute inset-x-0 bottom-0 p-6 text-paper">
+          <span class="font-mono text-xs text-goldlt">01</span>
+          <h3 class="mt-1 font-display text-2xl md:text-4xl font-medium leading-snug" data-i18n="sec_1">Sucreries &amp; agro-alimentaire</h3>
+          <p class="mt-2 max-w-sm text-sm leading-relaxed text-paper/85" data-i18n="sec_1d">Turbines, moulins et lignes de diffusion — le cœur historique de notre savoir-faire.</p>
+        </div>
+      </article>
+      <article class="group relative overflow-hidden rounded-2xl ring-1 ring-ink/10 col-span-2">
+        <img loading="lazy" decoding="async" src="assets/img/conveyor.jpg" alt="Transporteur industriel" class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent"></div>
+        <span class="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-paper/90 text-ink backdrop-blur-sm transition-[transform,background-color,color] duration-300 ease-out group-hover:rotate-90 group-hover:bg-ink group-hover:text-paper"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        <div class="absolute inset-x-0 bottom-0 p-6 text-paper">
+          <span class="font-mono text-xs text-goldlt">02</span>
+          <h3 class="mt-1 font-display text-xl md:text-2xl font-medium leading-snug" data-i18n="sec_2">Cimenteries</h3>
+          <p class="mt-2 max-w-sm text-sm leading-relaxed text-paper/85" data-i18n="sec_2d">Broyeurs, fours et transporteurs sollicités en charge continue.</p>
+        </div>
+      </article>
+      <article class="group relative overflow-hidden rounded-2xl ring-1 ring-ink/10 col-span-1">
+        <img loading="lazy" decoding="async" src="assets/img/gears-reducers.jpg" alt="Réducteurs et engrenages lourds" class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent"></div>
+        <span class="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-paper/90 text-ink backdrop-blur-sm transition-[transform,background-color,color] duration-300 ease-out group-hover:rotate-90 group-hover:bg-ink group-hover:text-paper"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        <div class="absolute inset-x-0 bottom-0 p-6 text-paper">
+          <span class="font-mono text-xs text-goldlt">03</span>
+          <h3 class="mt-1 font-display text-xl md:text-2xl font-medium leading-snug" data-i18n="sec_3">Phosphates &amp; dérivés</h3>
+          <p class="mt-2 max-w-sm text-sm leading-relaxed text-paper/85 hidden lg:block" data-i18n="sec_3d">Turbo-alternateurs et conservation des équipements lourds.</p>
+        </div>
+      </article>
+      <article class="group relative overflow-hidden rounded-2xl ring-1 ring-ink/10 col-span-1">
+        <img loading="lazy" decoding="async" src="assets/img/hero-plant.jpg" alt="Ligne de production papetière" class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent"></div>
+        <span class="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-paper/90 text-ink backdrop-blur-sm transition-[transform,background-color,color] duration-300 ease-out group-hover:rotate-90 group-hover:bg-ink group-hover:text-paper"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        <div class="absolute inset-x-0 bottom-0 p-6 text-paper">
+          <span class="font-mono text-xs text-goldlt">04</span>
+          <h3 class="mt-1 font-display text-xl md:text-2xl font-medium leading-snug" data-i18n="sec_4">Papier</h3>
+          <p class="mt-2 max-w-sm text-sm leading-relaxed text-paper/85 hidden lg:block" data-i18n="sec_4d">Réchauffeurs et turbines à vapeur des lignes de production papetière.</p>
+        </div>
+      </article>
+      <article class="group relative overflow-hidden rounded-2xl ring-1 ring-ink/10 col-span-2">
+        <img loading="lazy" decoding="async" src="assets/img/workshop-pinions.jpg" alt="Chaudronnerie et usinage en atelier" class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent"></div>
+        <span class="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-paper/90 text-ink backdrop-blur-sm transition-[transform,background-color,color] duration-300 ease-out group-hover:rotate-90 group-hover:bg-ink group-hover:text-paper"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        <div class="absolute inset-x-0 bottom-0 p-6 text-paper">
+          <span class="font-mono text-xs text-goldlt">05</span>
+          <h3 class="mt-1 font-display text-xl md:text-2xl font-medium leading-snug" data-i18n="sec_5">Acier &amp; matériaux</h3>
+          <p class="mt-2 max-w-sm text-sm leading-relaxed text-paper/85" data-i18n="sec_5d">Chaudronnerie sur mesure en acier, inox et aluminium.</p>
+        </div>
+      </article>
+      <a href="#contact" class="group relative col-span-2 flex flex-col justify-end overflow-hidden rounded-2xl bg-gold p-6 text-paper transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-1 hover:shadow-lift">
+        <span class="absolute right-5 top-5 flex h-9 w-9 items-center justify-center rounded-full border border-paper/40 transition-transform duration-300 ease-out group-hover:translate-x-0.5"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <h3 class="font-display text-xl font-medium leading-snug md:text-2xl" data-i18n="sectors_cta_t">Votre secteur n'est pas listé ?</h3>
+        <p class="mt-2 max-w-sm text-sm leading-relaxed text-paper/85" data-i18n="sectors_cta_d">Parlons de vos équipements critiques.</p>
+      </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section id="services" class="mx-auto max-w-content px-6 py-24 md:py-32">
+    <div class="max-w-2xl will-reveal">
+      <p class="font-mono text-xs uppercase tracking-[0.3em] text-gold" data-i18n="services_kicker">Prestations</p>
+      <h2 class="mt-5 text-balance font-display text-4xl font-medium leading-[1.1] tracking-tight md:text-5xl" data-i18n="services_title">Ce que nous faisons, sur site et en atelier</h2>
+    </div>
+
+    <div class="panels group mt-12 flex flex-col gap-3 md:flex-row md:gap-3">
+      <article class="panel flex h-72 rounded-2xl ring-1 ring-ink/10 md:h-auto">
+        <img loading="lazy" decoding="async" src="assets/img/gearboxes-blue.jpg" alt="Motoréducteurs et pompes industrielles" class="p-img absolute inset-0 h-full w-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/35 to-transparent"></div>
+        <div class="relative flex h-full w-full flex-col justify-end p-6 text-paper">
+          <span class="font-mono text-sm text-goldlt">01</span>
+          <h3 class="mt-2 font-display text-xl font-medium leading-snug md:text-2xl" data-i18n="srv_1_t">Pompes, réducteurs &amp; motoréducteurs</h3>
+          <p class="p-desc mt-3 max-w-md text-sm leading-relaxed text-paper/85" data-i18n="srv_1_d">Entretien, réparation et remise en service des pompes, réducteurs de diffusion et entraînements.</p>
+        </div>
+      </article>
+      <article class="panel flex h-72 rounded-2xl ring-1 ring-ink/10 md:h-auto">
+        <img loading="lazy" decoding="async" src="assets/img/mill-fives.jpg" alt="Moulin d'extraction de canne à sucre" class="p-img absolute inset-0 h-full w-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/35 to-transparent"></div>
+        <div class="relative flex h-full w-full flex-col justify-end p-6 text-paper">
+          <span class="font-mono text-sm text-goldlt">02</span>
+          <h3 class="mt-2 font-display text-xl font-medium leading-snug md:text-2xl" data-i18n="srv_2_t">Moulins d'extraction</h3>
+          <p class="p-desc mt-3 max-w-md text-sm leading-relaxed text-paper/85" data-i18n="srv_2_d">Optimisation, réparation et réglage des moulins à canne à sucre.</p>
+        </div>
+      </article>
+      <article class="panel flex h-72 rounded-2xl ring-1 ring-ink/10 md:h-auto">
+        <img loading="lazy" decoding="async" src="assets/img/steam-valve.jpg" alt="Turbines à vapeur et chaudières" class="p-img absolute inset-0 h-full w-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/35 to-transparent"></div>
+        <div class="relative flex h-full w-full flex-col justify-end p-6 text-paper">
+          <span class="font-mono text-sm text-goldlt">03</span>
+          <h3 class="mt-2 font-display text-xl font-medium leading-snug md:text-2xl" data-i18n="srv_3_t">Turbines à vapeur &amp; chaudières</h3>
+          <p class="p-desc mt-3 max-w-md text-sm leading-relaxed text-paper/85" data-i18n="srv_3_d">Vérification, expertise des turbo-alternateurs et travaux sur chaudières.</p>
+        </div>
+      </article>
+      <article class="panel flex h-72 rounded-2xl ring-1 ring-ink/10 md:h-auto">
+        <img loading="lazy" decoding="async" src="assets/img/conveyor.jpg" alt="Transporteurs à bandes" class="p-img absolute inset-0 h-full w-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/35 to-transparent"></div>
+        <div class="relative flex h-full w-full flex-col justify-end p-6 text-paper">
+          <span class="font-mono text-sm text-goldlt">04</span>
+          <h3 class="mt-2 font-display text-xl font-medium leading-snug md:text-2xl" data-i18n="srv_4_t">Transporteurs métalliques &amp; à bandes</h3>
+          <p class="p-desc mt-3 max-w-md text-sm leading-relaxed text-paper/85" data-i18n="srv_4_d">Fourniture, installation et maintenance des transporteurs et vis.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="mt-16 border-t border-ink/10 pt-10">
+      <p class="font-mono text-xs uppercase tracking-[0.3em] text-stone" data-i18n="services_more">Également</p>
+      <div class="mt-8 grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="group"><h4 class="font-display text-lg font-medium transition-colors duration-200 group-hover:text-gold" data-i18n="srv_5_t">Chaudronnerie</h4><p class="mt-1.5 text-sm leading-relaxed text-stone" data-i18n="srv_5_d">Acier, acier inoxydable et aluminium.</p></div>
+        <div class="group"><h4 class="font-display text-lg font-medium transition-colors duration-200 group-hover:text-gold" data-i18n="srv_6_t">Alignement laser</h4><p class="mt-1.5 text-sm leading-relaxed text-stone" data-i18n="srv_6_d">Précision sur arbres et lignes d'arbres.</p></div>
+        <div class="group"><h4 class="font-display text-lg font-medium transition-colors duration-200 group-hover:text-gold" data-i18n="srv_7_t">Optimisation énergétique</h4><p class="mt-1.5 text-sm leading-relaxed text-stone" data-i18n="srv_7_d">Rationalisation du rendement des installations.</p></div>
+        <div class="group"><h4 class="font-display text-lg font-medium transition-colors duration-200 group-hover:text-gold" data-i18n="srv_8_t">Conservation &amp; peinture</h4><p class="mt-1.5 text-sm leading-relaxed text-stone" data-i18n="srv_8_d">Nettoyage, conservation et robinetterie.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RAIL · clients (logo marquee — kept) ============ -->
+  <div class="rail-mask overflow-hidden border-y border-line2 bg-cream py-4">
+    <div class="marquee reverse items-center text-ink/70">
+      <span class="flex shrink-0 items-center gap-10 px-5 font-display text-base font-medium"><span class="media-ring flex h-16 items-center justify-center rounded-xl bg-white px-7"><img loading="lazy" src="assets/img/logos/cosumar.png" alt="Cosumar" class="max-h-11 w-auto object-contain"/></span><span class="media-ring flex h-16 items-center justify-center rounded-xl bg-white px-7"><img loading="lazy" src="assets/img/logos/ip.png" alt="International Paper" class="max-h-7 w-auto object-contain"/></span><span class="media-ring flex h-16 items-center justify-center rounded-xl bg-white px-7"><img loading="lazy" src="assets/img/logos/ocp.png" alt="OCP" class="max-h-11 w-auto object-contain"/></span><span class="media-ring flex h-16 items-center justify-center rounded-xl bg-white px-7"><img loading="lazy" src="assets/img/logos/oncf.png" alt="ONCF" class="max-h-8 w-auto object-contain"/></span><span class="media-ring flex h-16 items-center justify-center rounded-xl bg-white px-7"><img loading="lazy" src="assets/img/logos/nzoiasugar.png" alt="Nzoia Sugar" class="max-h-9 w-auto object-contain"/></span><span class="media-ring flex h-16 items-center justify-center rounded-xl bg-white px-7"><img loading="lazy" src="assets/img/logos/somdia.png" alt="Somdia" class="max-h-8 w-auto object-contain"/></span></span>
+      <span class="flex shrink-0 items-center gap-10 px-5 font-display text-base font-medium" aria-hidden="true"><span class="media-ring flex h-16 items-center justify-center rounded-xl bg-white px-7"><img loading="lazy" src="assets/img/logos/cosumar.png" alt="Cosumar" class="max-h-11 w-auto object-contain"/></span><span class="media-ring flex h-16 items-center justify-center rounded-xl bg-white px-7"><img loading="lazy" src="assets/img/logos/ip.png" alt="International Paper" class="max-h-7 w-auto object-contain"/></span><span class="media-ring flex h-16 items-center justify-center rounded-xl bg-white px-7"><img loading="lazy" src="assets/img/logos/ocp.png" alt="OCP" class="max-h-11 w-auto object-contain"/></span><span class="media-ring flex h-16 items-center justify-center rounded-xl bg-white px-7"><img loading="lazy" src="assets/img/logos/oncf.png" alt="ONCF" class="max-h-8 w-auto object-contain"/></span><span class="media-ring flex h-16 items-center justify-center rounded-xl bg-white px-7"><img loading="lazy" src="assets/img/logos/nzoiasugar.png" alt="Nzoia Sugar" class="max-h-9 w-auto object-contain"/></span><span class="media-ring flex h-16 items-center justify-center rounded-xl bg-white px-7"><img loading="lazy" src="assets/img/logos/somdia.png" alt="Somdia" class="max-h-8 w-auto object-contain"/></span></span>
+    </div>
+  </div>
+
+  <!-- ============ REFERENCES ============ -->
+  <section id="references" class="mx-auto max-w-content px-6 py-24 md:py-32">
+    <div class="grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
+      <div>
+        <p class="font-mono text-xs uppercase tracking-[0.3em] text-gold" data-i18n="refs_kicker">Références</p>
+        <h2 class="mt-5 max-w-xl text-balance font-display text-4xl font-medium leading-[1.1] tracking-tight md:text-5xl" data-i18n="refs_title">Des références qui parlent pour nous</h2>
+      </div>
+      <p class="max-w-sm text-pretty text-stone" data-i18n="refs_lead">Du Maroc au Kenya, au Tchad et au Burkina Faso, nous intervenons pour des leaders industriels.</p>
+    </div>
+
+    <ul class="stagger mt-14 border-t border-ink/10">
+      <li class="ref-row group cursor-pointer border-b border-ink/10">
+        <div class="grid grid-cols-[80px_1fr_auto] items-center gap-5 py-6 md:grid-cols-[200px_1fr_auto] md:gap-10">
+          <span class="inline-flex h-12 items-center justify-center rounded-lg bg-white/50 px-3"><img loading="lazy" decoding="async" src="assets/img/logos/cosumar.png" alt="Cosumar" class="ref-logo max-h-9 w-auto object-contain" /></span>
+          <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1"><h3 class="font-display text-lg font-medium md:text-xl">Cosumar</h3><span class="font-mono text-xs tracking-wide text-gold" data-i18n="ref_cosumar_r">Maroc · Groupe sucrier</span></div>
+          <span class="text-stone transition-transform duration-300 ease-out group-hover:rotate-45 group-[.open]:rotate-45"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </div>
+        <div class="acc"><div><p class="pb-6 text-sm leading-relaxed text-stone md:pl-[210px]" data-i18n="ref_cosumar">SURAC, SUNABEL & Doukkala — turbines à vapeur, moulins, turbo-alternateurs, réducteurs RT2/RT4 et rotor 6 MW.</p></div></div>
+      </li>
+      <li class="ref-row group cursor-pointer border-b border-ink/10">
+        <div class="grid grid-cols-[80px_1fr_auto] items-center gap-5 py-6 md:grid-cols-[200px_1fr_auto] md:gap-10">
+          <span class="inline-flex h-12 items-center justify-center rounded-lg bg-white/50 px-3"><img loading="lazy" decoding="async" src="assets/img/logos/ip.png" alt="CMCP · International Paper" class="ref-logo max-h-6 w-auto object-contain" /></span>
+          <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1"><h3 class="font-display text-lg font-medium md:text-xl">CMCP · International Paper</h3><span class="font-mono text-xs tracking-wide text-gold" data-i18n="ref_cmcp_r">Maroc · Papier</span></div>
+          <span class="text-stone transition-transform duration-300 ease-out group-hover:rotate-45 group-[.open]:rotate-45"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </div>
+        <div class="acc"><div><p class="pb-6 text-sm leading-relaxed text-stone md:pl-[210px]" data-i18n="ref_cmcp">CMCP Kénitra — réchauffeurs et maintenance des turbines à vapeur.</p></div></div>
+      </li>
+      <li class="ref-row group cursor-pointer border-b border-ink/10">
+        <div class="grid grid-cols-[80px_1fr_auto] items-center gap-5 py-6 md:grid-cols-[200px_1fr_auto] md:gap-10">
+          <span class="inline-flex h-12 items-center justify-center rounded-lg bg-white/50 px-3"><img loading="lazy" decoding="async" src="assets/img/logos/ocp.png" alt="OCP" class="ref-logo max-h-10 w-auto object-contain" /></span>
+          <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1"><h3 class="font-display text-lg font-medium md:text-xl">OCP</h3><span class="font-mono text-xs tracking-wide text-gold" data-i18n="ref_ocp_r">Maroc · Phosphates</span></div>
+          <span class="text-stone transition-transform duration-300 ease-out group-hover:rotate-45 group-[.open]:rotate-45"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </div>
+        <div class="acc"><div><p class="pb-6 text-sm leading-relaxed text-stone md:pl-[210px]" data-i18n="ref_ocp">Office Chérifien des Phosphates — turbo-alternateurs et conservation d'équipements lourds.</p></div></div>
+      </li>
+      <li class="ref-row group cursor-pointer border-b border-ink/10">
+        <div class="grid grid-cols-[80px_1fr_auto] items-center gap-5 py-6 md:grid-cols-[200px_1fr_auto] md:gap-10">
+          <span class="inline-flex h-12 items-center justify-center rounded-lg bg-white/50 px-3"><img loading="lazy" decoding="async" src="assets/img/logos/oncf.png" alt="ONCF · EMIC" class="ref-logo max-h-7 w-auto object-contain" /></span>
+          <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1"><h3 class="font-display text-lg font-medium md:text-xl">ONCF · EMIC</h3><span class="font-mono text-xs tracking-wide text-gold" data-i18n="ref_oncf_r">Maroc · Ferroviaire</span></div>
+          <span class="text-stone transition-transform duration-300 ease-out group-hover:rotate-45 group-[.open]:rotate-45"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </div>
+        <div class="acc"><div><p class="pb-6 text-sm leading-relaxed text-stone md:pl-[210px]" data-i18n="ref_oncf">EMIC Casablanca — ergonomie des cabines de locomotives E1250.</p></div></div>
+      </li>
+      <li class="ref-row group cursor-pointer border-b border-ink/10">
+        <div class="grid grid-cols-[80px_1fr_auto] items-center gap-5 py-6 md:grid-cols-[200px_1fr_auto] md:gap-10">
+          <span class="inline-flex h-12 items-center justify-center rounded-lg bg-white/50 px-3"><img loading="lazy" decoding="async" src="assets/img/logos/nzoiasugar.png" alt="Nzoia Sugar" class="ref-logo max-h-9 w-auto object-contain" /></span>
+          <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1"><h3 class="font-display text-lg font-medium md:text-xl">Nzoia Sugar</h3><span class="font-mono text-xs tracking-wide text-gold" data-i18n="ref_nzoia_r">Kenya · Sucrerie</span></div>
+          <span class="text-stone transition-transform duration-300 ease-out group-hover:rotate-45 group-[.open]:rotate-45"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </div>
+        <div class="acc"><div><p class="pb-6 text-sm leading-relaxed text-stone md:pl-[210px]" data-i18n="ref_nzoia">Turbo-moulins, réglage des moulins et installation d'une turbine de 4 MW.</p></div></div>
+      </li>
+      <li class="ref-row group cursor-pointer border-b border-ink/10">
+        <div class="grid grid-cols-[80px_1fr_auto] items-center gap-5 py-6 md:grid-cols-[200px_1fr_auto] md:gap-10">
+          <span class="inline-flex h-12 items-center justify-center rounded-lg bg-white/50 px-3"><img loading="lazy" decoding="async" src="assets/img/logos/somdia.png" alt="CST · Somdia" class="ref-logo max-h-7 w-auto object-contain" /></span>
+          <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1"><h3 class="font-display text-lg font-medium md:text-xl">CST · Somdia</h3><span class="font-mono text-xs tracking-wide text-gold" data-i18n="ref_cst_r">Tchad · Agro-industrie</span></div>
+          <span class="text-stone transition-transform duration-300 ease-out group-hover:rotate-45 group-[.open]:rotate-45"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </div>
+        <div class="acc"><div><p class="pb-6 text-sm leading-relaxed text-stone md:pl-[210px]" data-i18n="ref_cst">CST · Somdia — moteur de défibreur et augmentation de la capacité d'usine.</p></div></div>
+      </li>
+      <li class="ref-row group cursor-pointer border-b border-ink/10">
+        <div class="grid grid-cols-[80px_1fr_auto] items-center gap-5 py-6 md:grid-cols-[200px_1fr_auto] md:gap-10">
+          <span class="inline-flex h-12 items-center justify-center rounded-lg bg-white/50 px-3"><img loading="lazy" decoding="async" src="assets/img/logos/sosuco.png" alt="SOSUCO" class="ref-logo max-h-10 w-auto object-contain" /></span>
+          <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1"><h3 class="font-display text-lg font-medium md:text-xl">SOSUCO</h3><span class="font-mono text-xs tracking-wide text-gold" data-i18n="ref_sosuco_r">Burkina Faso · Sucrerie</span></div>
+          <span class="text-stone transition-transform duration-300 ease-out group-hover:rotate-45 group-[.open]:rotate-45"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </div>
+        <div class="acc"><div><p class="pb-6 text-sm leading-relaxed text-stone md:pl-[210px]" data-i18n="ref_sosuco">Société Sucrière de la Comoé, Ouagadougou — entretien et maintenance des équipements de sucrerie.</p></div></div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ============ RESOURCES ============ -->
+  <section id="resources" class="bg-cream py-24 md:py-32">
+    <div class="mx-auto grid max-w-content items-center gap-14 px-6 lg:grid-cols-2">
+      <div class="will-reveal order-2 lg:order-1">
+        <img loading="lazy" decoding="async" src="assets/img/gears-reducers.jpg" alt="Réducteurs et engrenages révisés par SNMI" class="aspect-[4/3] w-full rounded-2xl object-cover ring-1 ring-ink/10" />
+      </div>
+      <div class="will-reveal order-1 lg:order-2">
+        <p class="font-mono text-xs uppercase tracking-[0.3em] text-gold" data-i18n="res_kicker">Nos moyens</p>
+        <h2 class="mt-5 text-balance font-display text-4xl font-medium leading-[1.1] tracking-tight md:text-5xl" data-i18n="res_title">Les moyens de tenir nos engagements</h2>
+        <p class="mt-6 text-pretty leading-relaxed text-stone" data-i18n="res_human">Un effectif de 25 personnes — administratif et technique : ingénieurs et techniciens — renforcé par des compétences spécialisées. Une flotte logistique (utilitaires, fourgonnette, camionnette) pour le personnel et l'outillage sur site.</p>
+        <h3 class="mt-8 font-display text-xl font-medium" data-i18n="res_atelier_t">Atelier de 450 m² équipé</h3>
+        <ul class="mt-5 grid grid-cols-1 gap-x-12 sm:grid-cols-2">
+          <li class="flex items-center justify-between gap-4 border-b border-ink/10 py-3 text-sm"><span data-i18n="res_1">Tour de 4 m</span><span class="font-mono text-[11px] text-gold">01</span></li>
+          <li class="flex items-center justify-between gap-4 border-b border-ink/10 py-3 text-sm"><span data-i18n="res_2">Perceuse</span><span class="font-mono text-[11px] text-gold">02</span></li>
+          <li class="flex items-center justify-between gap-4 border-b border-ink/10 py-3 text-sm"><span data-i18n="res_3">Deux presses</span><span class="font-mono text-[11px] text-gold">03</span></li>
+          <li class="flex items-center justify-between gap-4 border-b border-ink/10 py-3 text-sm"><span data-i18n="res_4">Plieuse</span><span class="font-mono text-[11px] text-gold">04</span></li>
+          <li class="flex items-center justify-between gap-4 border-b border-ink/10 py-3 text-sm"><span data-i18n="res_5">Cisaille industrielle</span><span class="font-mono text-[11px] text-gold">05</span></li>
+          <li class="flex items-center justify-between gap-4 border-b border-ink/10 py-3 text-sm"><span data-i18n="res_6">Deux compresseurs</span><span class="font-mono text-[11px] text-gold">06</span></li>
+          <li class="flex items-center justify-between gap-4 border-b border-ink/10 py-3 text-sm"><span data-i18n="res_7">Scie ruban à métaux</span><span class="font-mono text-[11px] text-gold">07</span></li>
+          <li class="flex items-center justify-between gap-4 border-b border-ink/10 py-3 text-sm"><span data-i18n="res_8">Poste de chaudronnerie</span><span class="font-mono text-[11px] text-gold">08</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="mx-auto max-w-content px-6 py-24 md:py-32">
+    <div class="grid items-start gap-12 lg:grid-cols-[1.2fr_1fr]">
+      <div>
+        <p class="font-mono text-xs uppercase tracking-[0.3em] text-gold" data-i18n="contact_kicker">Disponibilité 24/7 sur site</p>
+        <h2 class="mt-5 text-balance font-display text-4xl font-medium leading-[1.05] tracking-tight md:text-6xl" data-i18n="contact_title">Un arrêt machine ? Appelez-nous.</h2>
+        <p class="mt-6 max-w-xl text-pretty text-lg leading-relaxed text-stone" data-i18n="contact_lead">Diagnostic, devis ou intervention d'urgence — notre équipe technique répond directement.</p>
+        <div class="mt-9 flex flex-wrap gap-3">
+          <a href="tel:+212672969412" class="press inline-flex items-center gap-3 rounded-xl bg-ink px-7 py-4 font-semibold text-paper shadow-soft transition-[transform,box-shadow] duration-200 ease-out hover:-translate-y-0.5 hover:shadow-lift">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +212 6 72 96 94 12
+          </a>
+          <a href="mailto:ab-nma@hotmail.fr" class="press inline-flex items-center gap-3 rounded-xl border border-line2 px-7 py-4 font-semibold text-ink transition-[transform,background-color,border-color] duration-200 ease-out hover:border-ink">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+            ab-nma@hotmail.fr
+          </a>
+        </div>
+      </div>
+      <div class="rounded-2xl border border-ink/10 bg-cream p-7">
+        <dl class="divide-y divide-ink/10">
+          <div class="pb-5"><dt class="font-mono text-[11px] uppercase tracking-wider text-gold" data-i18n="ci_addr_l">Siège social</dt><dd class="mt-1.5 text-sm leading-relaxed text-ink">30-32, Angle Aboubaker Essadiq &amp; Ghandi, Immeuble B, Bureau N°1, Résidence Ibrahim — Kénitra, Maroc</dd></div>
+          <div class="grid grid-cols-2 gap-5 py-5">
+            <div><dt class="font-mono text-[11px] uppercase tracking-wider text-gold" data-i18n="ci_fax_l">Fax</dt><dd class="mt-1 text-sm text-ink">+212 5 37 37 58 68</dd></div>
+            <div><dt class="font-mono text-[11px] uppercase tracking-wider text-gold" data-i18n="ci_web_l">Site web</dt><dd class="mt-1 text-sm"><a class="text-ink transition-colors duration-200 hover:text-gold" href="http://snmi.sarl" target="_blank" rel="noopener">snmi.sarl</a></dd></div>
+          </div>
+          <div class="pt-5"><dt class="font-mono text-[11px] uppercase tracking-wider text-gold" data-i18n="ci_auto_l">SNMI Service Auto</dt><dd class="mt-1 text-sm text-ink">Bir Rami Sud N° 1758, Kénitra · 06 56 44 47 17</dd></div>
+        </dl>
+      </div>
+    </div>
+    <p class="mt-14 border-t border-ink/10 pt-6 font-mono text-xs text-stone" data-i18n="legal">SNMI SARL · RC 36853 · Patente 20101270 · IF 29152961 · CNSS 8879176 · Attijariwafa Bank</p>
+  </section>
+
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-ink pt-16 text-paper/60">
+    <div class="mx-auto grid max-w-content gap-10 px-6 md:grid-cols-[1.4fr_1fr_1fr]">
+      <div>
+        <img src="assets/logo-white.svg" alt="SNMI" class="h-9 w-auto" />
+        <p class="mt-4 max-w-sm text-sm leading-relaxed" data-i18n="footer_about">Entretien, réparation et optimisation des équipements industriels lourds. Sur site et en atelier, partout où la disponibilité machine est critique.</p>
+      </div>
+      <div>
+        <h3 class="font-mono text-xs uppercase tracking-wider text-goldlt" data-i18n="footer_nav">Navigation</h3>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          <li><a href="#about" class="transition-colors duration-200 hover:text-paper" data-i18n="nav_about">À propos</a></li>
+          <li><a href="#sectors" class="transition-colors duration-200 hover:text-paper" data-i18n="nav_sectors">Secteurs</a></li>
+          <li><a href="#services" class="transition-colors duration-200 hover:text-paper" data-i18n="nav_services">Services</a></li>
+          <li><a href="#references" class="transition-colors duration-200 hover:text-paper" data-i18n="nav_refs">Références</a></li>
+          <li><a href="#resources" class="transition-colors duration-200 hover:text-paper" data-i18n="nav_resources">Moyens</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-mono text-xs uppercase tracking-wider text-goldlt" data-i18n="footer_contact">Contact</h3>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          <li><a href="tel:+212672969412" class="transition-colors duration-200 hover:text-paper">+212 6 72 96 94 12</a></li>
+          <li><a href="mailto:ab-nma@hotmail.fr" class="transition-colors duration-200 hover:text-paper">ab-nma@hotmail.fr</a></li>
+          <li class="pt-1 text-paper/40">Kénitra, Maroc</li>
+        </ul>
+      </div>
+    </div>
+    <div class="mx-auto mt-12 flex max-w-content flex-col items-center justify-between gap-3 border-t border-white/10 px-6 py-6 sm:flex-row">
+      <p class="text-xs">© <span id="year"></span> SNMI SARL — <span data-i18n="footer_rights">Tous droits réservés.</span></p>
+      <p class="font-mono text-xs text-paper/40">RC 36853 · IF 29152961 · </p>
+    </div>
+  </footer>
+
+  <button id="toTop" aria-label="Haut de page" class="fixed bottom-6 right-6 z-40 flex h-12 w-12 items-center justify-center rounded-xl bg-ink text-paper shadow-lift hover:bg-charcoal">
+    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

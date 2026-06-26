@@ -1,0 +1,13 @@
+<svg width="248" height="60" viewBox="0 0 248 60" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SNMI Maintenance Industrielle">
+  <g transform="translate(4 6)">
+    <g fill="#8C6E3F">
+      <ellipse cx="14" cy="9" rx="13" ry="6.5"/>
+      <ellipse cx="31" cy="11" rx="8.5" ry="5"/>
+      <circle cx="40" cy="11.5" r="4.5"/>
+    </g>
+    <path d="M40 14 L46 14 L48 48 L38 48 Z" fill="#1A1A1A"/>
+    <path d="M0 48 L0 33 L11 26 L11 33 L22 26 L22 33 L33 26 L33 48 Z" fill="#1A1A1A"/>
+  </g>
+  <text x="66" y="33" font-family="'Fraunces','Georgia',serif" font-size="29" font-weight="600" letter-spacing="0.5" fill="#1A1A1A">SNMI</text>
+  <text x="67" y="49" font-family="'JetBrains Mono',monospace" font-size="7.5" font-weight="500" letter-spacing="2.6" fill="#8C6E3F">MAINTENANCE INDUSTRIELLE</text>
+</svg>
