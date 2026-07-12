@@ -130,8 +130,8 @@
     @media (min-width:768px){
       .panels { height:34rem; }
       .panel { flex:1 1 0%; min-width:0; transition:flex-grow .6s cubic-bezier(.22,1,.36,1); }
-      .panels:hover .panel { flex-grow:.55; }
-      .panels .panel:hover { flex-grow:3.2; }
+      .panels:hover .panel { flex-grow:.6; }
+      .panels .panel:hover { flex-grow:2.8; }
       .panel .p-desc { opacity:0; transform:translateY(8px); }
       .panels .panel:hover .p-desc { opacity:1; transform:none; }
       .panel .p-img { transition:transform .8s cubic-bezier(.22,1,.36,1); }
@@ -288,9 +288,9 @@
 <div class="grid gap-14 lg:grid-cols-2 lg:items-start">
 <div class="will-reveal lg:sticky lg:top-28">
 <p class="font-mono text-xs uppercase tracking-[0.3em] text-gold" data-i18n="about_kicker">The company</p>
-<h2 class="mt-5 text-balance font-display text-4xl font-medium leading-[1.1] tracking-tight md:text-5xl" data-i18n="about_title">Mechanical expertise at the service of industry</h2>
-<p class="mt-6 text-pretty text-lg leading-relaxed text-stone" data-i18n="about_p1">SNMI (Société Nmar de Maintenance Industrielle) is an LLC specialized in industrial upkeep and maintenance, with deep roots in the sugar industry.</p>
-<p class="mt-4 text-pretty leading-relaxed text-stone" data-i18n="about_p2">We work across the full equipment life cycle: diagnosis, repair, laser alignment, commissioning, process optimization and conservation.</p>
+<h2 class="mt-5 text-balance font-display text-4xl font-medium leading-[1.1] tracking-tight md:text-5xl" data-i18n="about_title">Expertise at the service of industrial performance</h2>
+<p class="mt-6 text-pretty text-lg leading-relaxed text-stone" data-i18n="about_p1">SNMI supports industrial operators in improving the reliability, availability and performance of their installations.</p>
+<p class="mt-4 text-pretty leading-relaxed text-stone" data-i18n="about_p2">Backed by an experienced team and an approach centred on quality, safety and innovation, we design tailor-made solutions that meet our clients' performance and competitiveness challenges.</p>
 <div class="mt-8 inline-flex items-baseline gap-3 rounded-xl border border-ink/10 px-5 py-3">
 <span class="font-display text-3xl font-medium text-ink tnum">2010</span>
 <span class="font-mono text-[11px] uppercase tracking-wider text-stone" data-i18n="about_badge">Serving industry</span>
@@ -302,10 +302,11 @@
 <source src="../assets/video/workshop.mp4" type="video/mp4"/>
 </video>
 </figure>
-<ul class="mt-10 border-t border-ink/10">
-<li class="flex items-start gap-5 border-b border-ink/10 py-5"><span class="mt-0.5 font-mono text-sm text-gold">01</span><div><h3 class="font-display text-lg font-medium" data-i18n="org_1_t">General maintenance</h3><p class="mt-1 text-sm text-stone" data-i18n="org_1_d">Mechanical, electrical, boilermaking</p></div></li>
-<li class="flex items-start gap-5 border-b border-ink/10 py-5"><span class="mt-0.5 font-mono text-sm text-gold">02</span><div><h3 class="font-display text-lg font-medium" data-i18n="org_2_t">Automotive</h3><p class="mt-1 text-sm text-stone" data-i18n="org_2_d">Bodywork, conservation, painting</p></div></li>
-<li class="flex items-start gap-5 border-b border-ink/10 py-5"><span class="mt-0.5 font-mono text-sm text-gold">03</span><div><h3 class="font-display text-lg font-medium" data-i18n="org_3_t">Service provision</h3><p class="mt-1 text-sm text-stone" data-i18n="org_3_d">Process optimization</p></div></li>
+<p class="mt-10 font-mono text-xs uppercase tracking-[0.3em] text-stone" data-i18n="about_dom">Fields of expertise</p>
+<ul class="mt-6 border-t border-ink/10">
+<li class="flex items-start gap-5 border-b border-ink/10 py-5"><span class="mt-0.5 font-mono text-sm text-gold">01</span><div><h3 class="font-display text-lg font-medium" data-i18n="org_1_t">Critical equipment</h3><p class="mt-1 text-sm leading-relaxed text-stone" data-i18n="org_1_d">Steam turbines, mills, gearboxes, pumps, conveyors.</p></div></li>
+<li class="flex items-start gap-5 border-b border-ink/10 py-5"><span class="mt-0.5 font-mono text-sm text-gold">02</span><div><h3 class="font-display text-lg font-medium" data-i18n="org_2_t">Boilermaking &amp; piping</h3><p class="mt-1 text-sm leading-relaxed text-stone" data-i18n="org_2_d">Fabrication, repair and assembly, on site and in the workshop.</p></div></li>
+<li class="flex items-start gap-5 border-b border-ink/10 py-5"><span class="mt-0.5 font-mono text-sm text-gold">03</span><div><h3 class="font-display text-lg font-medium" data-i18n="org_3_t">Processes &amp; training</h3><p class="mt-1 text-sm leading-relaxed text-stone" data-i18n="org_3_d">Process optimization, chemical engineering and industrial maintenance.</p></div></li>
 </ul>
 </div>
 </div>
@@ -420,13 +421,22 @@
 <p class="p-desc mt-3 max-w-md text-sm leading-relaxed text-paper/85" data-i18n="srv_4_d">Supply, installation and maintenance.</p>
 </div>
 </article>
+<article class="panel flex h-72 rounded-2xl ring-1 ring-ink/10 md:h-auto">
+<img alt="Formation en atelier" class="p-img absolute inset-0 h-full w-full object-cover" decoding="async" loading="lazy" src="../assets/img/workshop-pinions.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/35 to-transparent"></div>
+<div class="relative flex h-full w-full flex-col justify-end p-6 text-paper">
+<span class="font-mono text-sm text-goldlt">05</span>
+<h3 class="mt-2 font-display text-xl font-medium leading-snug md:text-2xl" data-i18n="srv_5p_t">Training &amp; skills development</h3>
+<p class="p-desc mt-3 max-w-md text-sm leading-relaxed text-paper/85" data-i18n="srv_5p_d">Process engineering, chemical engineering and industrial maintenance — on site or in our workshops.</p>
+</div>
+</article>
 </div>
 <div class="mt-16 border-t border-ink/10 pt-10">
 <p class="font-mono text-xs uppercase tracking-[0.3em] text-stone" data-i18n="services_more">Also</p>
 <div class="mt-8 grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
-<div class="group"><h4 class="font-display text-lg font-medium transition-colors duration-200 group-hover:text-gold" data-i18n="srv_5_t">Boilermaking</h4><p class="mt-1.5 text-sm leading-relaxed text-stone" data-i18n="srv_5_d">Steel, stainless, aluminium</p></div>
+<div class="group"><h4 class="font-display text-lg font-medium transition-colors duration-200 group-hover:text-gold" data-i18n="srv_5_t">Boilermaking &amp; piping</h4><p class="mt-1.5 text-sm leading-relaxed text-stone" data-i18n="srv_5_d">Steel, stainless, aluminium</p></div>
 <div class="group"><h4 class="font-display text-lg font-medium transition-colors duration-200 group-hover:text-gold" data-i18n="srv_6_t">Laser alignment</h4><p class="mt-1.5 text-sm leading-relaxed text-stone" data-i18n="srv_6_d">Precision on shafts &amp; lines</p></div>
-<div class="group"><h4 class="font-display text-lg font-medium transition-colors duration-200 group-hover:text-gold" data-i18n="srv_7_t">Energy optimization</h4><p class="mt-1.5 text-sm leading-relaxed text-stone" data-i18n="srv_7_d">Plant efficiency</p></div>
+<div class="group"><h4 class="font-display text-lg font-medium transition-colors duration-200 group-hover:text-gold" data-i18n="srv_7_t">Process optimization</h4><p class="mt-1.5 text-sm leading-relaxed text-stone" data-i18n="srv_7_d">Plant output, energy efficiency and reliability</p></div>
 <div class="group"><h4 class="font-display text-lg font-medium transition-colors duration-200 group-hover:text-gold" data-i18n="srv_8_t">Conservation &amp; painting</h4><p class="mt-1.5 text-sm leading-relaxed text-stone" data-i18n="srv_8_d">Cleaning, valves</p></div>
 </div>
 </div>
@@ -454,7 +464,7 @@
 <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1"><h3 class="font-display text-lg font-medium md:text-xl">Cosumar</h3><span class="font-mono text-xs tracking-wide text-gold" data-i18n="ref_cosumar_r">Morocco · Sugar group</span></div>
 <span class="text-stone transition-transform duration-300 ease-out group-hover:rotate-45 group-[.open]:rotate-45"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></span>
 </div>
-<div class="acc"><div><p class="pb-6 text-sm leading-relaxed text-stone md:pl-[210px]" data-i18n="ref_cosumar">SURAC, SUNABEL &amp; Doukkala — steam turbines, mills, turbo-alternators, RT2/RT4 gearboxes and a 6 MW rotor.</p></div></div>
+<div class="acc"><div><ul class="space-y-2.5 pb-7 text-sm leading-relaxed text-stone md:pl-[210px]" data-i18n="ref_cosumar"><li class="flex gap-3"><span class="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-gold"></span><span>SURAC, SUNABEL &amp; Doukkala — maintenance of steam turbines and mills.</span></li><li class="flex gap-3"><span class="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-gold"></span><span>Expertise on turbo-alternators and RT2 / RT4 gearboxes.</span></li><li class="flex gap-3"><span class="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-gold"></span><span>Repair of a 6 MW rotor.</span></li></ul></div></div>
 </li>
 <li class="ref-row group cursor-pointer border-b border-ink/10">
 <div class="grid grid-cols-[80px_1fr_auto] items-center gap-5 py-6 md:grid-cols-[200px_1fr_auto] md:gap-10">
@@ -462,7 +472,7 @@
 <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1"><h3 class="font-display text-lg font-medium md:text-xl">CMCP · International Paper</h3><span class="font-mono text-xs tracking-wide text-gold" data-i18n="ref_cmcp_r">Morocco · Paper</span></div>
 <span class="text-stone transition-transform duration-300 ease-out group-hover:rotate-45 group-[.open]:rotate-45"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></span>
 </div>
-<div class="acc"><div><p class="pb-6 text-sm leading-relaxed text-stone md:pl-[210px]" data-i18n="ref_cmcp">CMCP Kénitra — heaters and steam-turbine maintenance.</p></div></div>
+<div class="acc"><div><ul class="space-y-2.5 pb-7 text-sm leading-relaxed text-stone md:pl-[210px]" data-i18n="ref_cmcp"><li class="flex gap-3"><span class="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-gold"></span><span>CMCP Kénitra — heaters and heat exchangers.</span></li><li class="flex gap-3"><span class="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-gold"></span><span>Steam-turbine maintenance.</span></li></ul></div></div>
 </li>
 <li class="ref-row group cursor-pointer border-b border-ink/10">
 <div class="grid grid-cols-[80px_1fr_auto] items-center gap-5 py-6 md:grid-cols-[200px_1fr_auto] md:gap-10">
@@ -470,7 +480,7 @@
 <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1"><h3 class="font-display text-lg font-medium md:text-xl">OCP</h3><span class="font-mono text-xs tracking-wide text-gold" data-i18n="ref_ocp_r">Morocco · Phosphates</span></div>
 <span class="text-stone transition-transform duration-300 ease-out group-hover:rotate-45 group-[.open]:rotate-45"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></span>
 </div>
-<div class="acc"><div><p class="pb-6 text-sm leading-relaxed text-stone md:pl-[210px]" data-i18n="ref_ocp">Cherifian Phosphates Office — turbo-alternators and conservation of heavy equipment.</p></div></div>
+<div class="acc"><div><ul class="space-y-2.5 pb-7 text-sm leading-relaxed text-stone md:pl-[210px]" data-i18n="ref_ocp"><li class="flex gap-3"><span class="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-gold"></span><span>Turbo-alternators — expertise and overhaul.</span></li><li class="flex gap-3"><span class="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-gold"></span><span>Conservation of heavy equipment.</span></li></ul></div></div>
 </li>
 <li class="ref-row group cursor-pointer border-b border-ink/10">
 <div class="grid grid-cols-[80px_1fr_auto] items-center gap-5 py-6 md:grid-cols-[200px_1fr_auto] md:gap-10">
@@ -478,7 +488,7 @@
 <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1"><h3 class="font-display text-lg font-medium md:text-xl">ONCF · EMIC</h3><span class="font-mono text-xs tracking-wide text-gold" data-i18n="ref_oncf_r">Morocco · Rail</span></div>
 <span class="text-stone transition-transform duration-300 ease-out group-hover:rotate-45 group-[.open]:rotate-45"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></span>
 </div>
-<div class="acc"><div><p class="pb-6 text-sm leading-relaxed text-stone md:pl-[210px]" data-i18n="ref_oncf">EMIC Casablanca — ergonomics of E1250 locomotive cabins.</p></div></div>
+<div class="acc"><div><ul class="space-y-2.5 pb-7 text-sm leading-relaxed text-stone md:pl-[210px]" data-i18n="ref_oncf"><li class="flex gap-3"><span class="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-gold"></span><span>EMIC Casablanca — ergonomics of E1250 locomotive cabins.</span></li><li class="flex gap-3"><span class="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-gold"></span><span>Jorf Lasfar — repair of buffer stops on TADS phosphate wagons.</span></li><li class="flex gap-3"><span class="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-gold"></span><span>Safi — repair of sills on Uads phosphate and limestone wagons.</span></li></ul></div></div>
 </li>
 <li class="ref-row group cursor-pointer border-b border-ink/10">
 <div class="grid grid-cols-[80px_1fr_auto] items-center gap-5 py-6 md:grid-cols-[200px_1fr_auto] md:gap-10">
@@ -486,7 +496,7 @@
 <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1"><h3 class="font-display text-lg font-medium md:text-xl">Nzoia Sugar</h3><span class="font-mono text-xs tracking-wide text-gold" data-i18n="ref_nzoia_r">Kenya · Sugar</span></div>
 <span class="text-stone transition-transform duration-300 ease-out group-hover:rotate-45 group-[.open]:rotate-45"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></span>
 </div>
-<div class="acc"><div><p class="pb-6 text-sm leading-relaxed text-stone md:pl-[210px]" data-i18n="ref_nzoia">Turbo-mills, mill setting and installation of a 4 MW turbine.</p></div></div>
+<div class="acc"><div><ul class="space-y-2.5 pb-7 text-sm leading-relaxed text-stone md:pl-[210px]" data-i18n="ref_nzoia"><li class="flex gap-3"><span class="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-gold"></span><span>Turbo-mills and mill setting.</span></li><li class="flex gap-3"><span class="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-gold"></span><span>Installation of a 4 MW turbine.</span></li></ul></div></div>
 </li>
 <li class="ref-row group cursor-pointer border-b border-ink/10">
 <div class="grid grid-cols-[80px_1fr_auto] items-center gap-5 py-6 md:grid-cols-[200px_1fr_auto] md:gap-10">
@@ -494,7 +504,7 @@
 <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1"><h3 class="font-display text-lg font-medium md:text-xl">CST · Somdia</h3><span class="font-mono text-xs tracking-wide text-gold" data-i18n="ref_cst_r">Chad · Agro-industry</span></div>
 <span class="text-stone transition-transform duration-300 ease-out group-hover:rotate-45 group-[.open]:rotate-45"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></span>
 </div>
-<div class="acc"><div><p class="pb-6 text-sm leading-relaxed text-stone md:pl-[210px]" data-i18n="ref_cst">CST · Somdia — shredder motor and plant capacity increase.</p></div></div>
+<div class="acc"><div><ul class="space-y-2.5 pb-7 text-sm leading-relaxed text-stone md:pl-[210px]" data-i18n="ref_cst"><li class="flex gap-3"><span class="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-gold"></span><span>Shredder motor — repair and recommissioning.</span></li><li class="flex gap-3"><span class="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-gold"></span><span>Increase of plant capacity.</span></li></ul></div></div>
 </li>
 <li class="ref-row group cursor-pointer border-b border-ink/10">
 <div class="grid grid-cols-[80px_1fr_auto] items-center gap-5 py-6 md:grid-cols-[200px_1fr_auto] md:gap-10">
@@ -502,7 +512,7 @@
 <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1"><h3 class="font-display text-lg font-medium md:text-xl">SOSUCO</h3><span class="font-mono text-xs tracking-wide text-gold" data-i18n="ref_sosuco_r">Burkina Faso · Sugar</span></div>
 <span class="text-stone transition-transform duration-300 ease-out group-hover:rotate-45 group-[.open]:rotate-45"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></span>
 </div>
-<div class="acc"><div><p class="pb-6 text-sm leading-relaxed text-stone md:pl-[210px]" data-i18n="ref_sosuco">Société Sucrière de la Comoé, Ouagadougou — upkeep and maintenance of sugar plant equipment.</p></div></div>
+<div class="acc"><div><ul class="space-y-2.5 pb-7 text-sm leading-relaxed text-stone md:pl-[210px]" data-i18n="ref_sosuco"><li class="flex gap-3"><span class="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-gold"></span><span>Upkeep and maintenance of cane-preparation equipment and steam turbines.</span></li><li class="flex gap-3"><span class="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-gold"></span><span>Mentoring of a technical manager — training at our premises, visits to bearing-repair workshops and participation in the installation of a new turbo-alternator in Morocco.</span></li><li class="flex gap-3"><span class="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-gold"></span><span>On-site training of staff — sugar extraction from sugar cane.</span></li></ul></div></div>
 </li>
 </ul>
 </section>
